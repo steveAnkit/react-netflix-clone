@@ -12,7 +12,7 @@ const Row = (props) => {
 
     async function fetchData() {
       const request = await axios.get(props.fetchUrl);
-      console.log(request.data.results);
+
       setMovies(request.data.results);
       return request;
     }
@@ -20,17 +20,17 @@ const Row = (props) => {
     fetchData();
   }, [props.fetchUrl]);
 
-  console.table(movies);
-
   return (
     <div className="row">
       <h1>{props.title}</h1>
       <div className="row_posters">
         {movies.map((movie) => (
           <img
-            className="row_poster"
+            className={`row_poster ${props.isLargeRow && "row_posterLarge"}`}
             key={movie.id}
-            src={`${base_Url}${movie.poster_path}`}
+            src={`${base_Url}${
+              props.isLargeRow ? movie.poster_path : movie.backdrop_path
+            }`}
             alt={movie.name}
           />
         ))}
