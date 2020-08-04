@@ -29,7 +29,7 @@ const Row = (props) => {
             className={`row_poster ${props.isLargeRow && "row_posterLarge"}`}
             key={movie.id}
             src={`${base_Url}${
-              props.isLargeRow ? movie.poster_path : movie.backdrop_path
+              props.isLargeRow ? movie.poster_path : movie.poster_path
             }`}
             alt={movie.name}
           />
