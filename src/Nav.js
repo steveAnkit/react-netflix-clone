@@ -6,7 +6,7 @@ function Nav() {
     <div className="nav">
       <img
         className="nav_logo"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Netflix_logo.svg/800px-Netflix_logo.svg.png"
+        src="http://www.pngmart.com/files/10/Netflix-Logo-PNG-Image.png"
         alt="Netflix Logo"
       />
     </div>
